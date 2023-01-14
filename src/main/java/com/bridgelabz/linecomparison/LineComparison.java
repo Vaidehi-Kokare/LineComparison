@@ -14,7 +14,19 @@ public class LineComparison {
         int x2 = scanner.nextInt();
         System.out.println("Enter coordinate of y2");
         int y2 = scanner.nextInt();
-        double len = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-        System.out.println("The length of line drawn by points ( " + x1 +"," + y1 + " ) and ( " + x2 + "," + y2 + " ) is: " + len);
+        System.out.println("Enter coordinate of x2");
+        int x3 = scanner.nextInt();
+        System.out.println("Enter coordinate of y2");
+        int y3 = scanner.nextInt();
+        System.out.println("Enter coordinate of x2");
+        int x4 = scanner.nextInt();
+        System.out.println("Enter coordinate of y2");
+        int y4 = scanner.nextInt();
+        double len1 = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+        double len2 = Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
+        if(len1==len2)
+            System.out.println("Lines are equal");
+        else
+            System.out.println("Lines are not equal");
     }
 }
