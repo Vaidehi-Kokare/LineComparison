@@ -3,10 +3,10 @@ package com.bridgelabz.linecomparison;
 import java.util.Scanner;
 
 public class LineComparison {
-    double calculateLength(int x1, int y1, int x2, int y2) {
+    static double calculateLength(int x1, int y1, int x2, int y2) {
         return Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
     }
-    void compareLength(double length1, double length2) {
+    static void compareLength(double length1, double length2) {
         if(length1==length2)
             System.out.println("Lines are equal");
         else
@@ -34,9 +34,8 @@ public class LineComparison {
         int x4 = scanner.nextInt();
         System.out.println("Enter coordinate of y2");
         int y4 = scanner.nextInt();
-        LineComparison linecomparison = new LineComparison();
-        double length1 = linecomparison.calculateLength(x1, y1, x2, y2);
-        double length2 = linecomparison.calculateLength(x3, y3, x4, y4);
-        linecomparison.compareLength(length1,length2);
+        double length1 = calculateLength(x1, y1, x2, y2);
+        double length2 = calculateLength(x3, y3, x4, y4);
+        compareLength(length1,length2);
     }
 }
